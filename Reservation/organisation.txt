@@ -1,0 +1,37 @@
+
+	""" A faire """
+
+
+	- pr�parer un envoi de mail automatique 
+	- faire en sorte que le client soit supprim� de la bdd une fois le s�jour termin�
+	- cr�er un syst�me de selection des chambres manuel
+		selection-chambre ne redirect pas
+	- système qui vérifie les dates
+
+	
+	(???)
+	
+- champ 'disponible' dans la table chambre est inutile depuis qu'on utilise l'id client ( null = dispo , non null = pas dispo ) 
+- l'index sert plus a rien ? 
+
+sch�ma
+
+1) le client arrive sur l'index, il doit indiquer la date de debut, de fin et le nombre de personnes
+2) le client acc�de au deuxi�me formulaire , mail valide , telephone , adresse , nom , prenom
+3) on l'envoie vers la page confirmation.php avec toutes les donn�es dans une array, dans l'ordre, dans une variable de session
+
+3) [positif] il confirme , ses donn�es sont �crites dans la bdd , il recoit le mail avec le prix 
+	et il est en attente de confirmation --> index.php avec un msg confirmant que tout s'est bien pass�
+
+3) [negatif] il change d'avis, toutes les variables de session sont r�initialis�es --> renvoi vers index.php
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+1) le client arrive sur la page de selection des chambres (selection-chambre.php) , il choisit une chambre
+	l'id de la chambre choisie est communiquée grâce a $_SESSION['idchr']
+2) le client arrive sur la page reservation.php il va indiquer les dates souhaitées et ses infos personnelles.
+	les données de form client sont encapsulées et sécurisées dans $_SESSION['client'] , les dates dans $_SESSION['dates'] ! a sécuriser
+3) recap de toutes les données + bouton oui ou non (confirmation.php)
+
+4) reservation terminée (envoi de mail) ou annulée redirection vers la selection des chambres  
