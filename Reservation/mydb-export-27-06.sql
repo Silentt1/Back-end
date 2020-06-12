@@ -93,8 +93,8 @@ CREATE TABLE IF NOT EXISTS `clients` (
 INSERT INTO `clients` (`id_client`, `Nom`, `Prenom`, `Adresse`, `Numéro`, `confirmer`) VALUES
 (3, 'Terminator', 'Arnold', 'Hell', '666', NULL),
 (6, 'Jonathan', 'Issou', 'Avenue de l\'étoile 42', '04444444444', NULL),
-(7, 'Lammens', 'Jillian', 'Avenue de l\'étoile 42', '04444444444', NULL),
-(8, 'Lammens', 'Jillian', 'Avenue Hubert 12', '0462327781', NULL);
+(7, 'Man', 'Super', 'Avenue de l\'étoile 42', '04444444444', NULL),
+(8, 'Lama', 'Dalai', 'Avenue Hubert 12', '0462327781', NULL);
 
 -- --------------------------------------------------------
 
